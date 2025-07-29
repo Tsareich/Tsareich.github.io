@@ -3,45 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEEN</title>
-    <link rel="stylesheet" href="style.css">
+    <title>南満州鉄道株式会社 | 公式ウェブサイト</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>TEENへようこそ</h1>
-        <nav>
-            <ul>
-                <li><a href="#">ホーム</a></li>
-                <li><a href="#">サービス</a></li>
-                <li><a href="#">お問い合わせ</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1>南満州鉄道株式会社</h1>
+            <p>アジアを結ぶ国際インフラのパイオニア</p>
+        </div>
     </header>
-    
-    <section id="about">
-        <h2>会社について</h2>
-        <p>TEENは山形市小白川町に拠点を置くIT企業です。</p>
-    </section>
-
-    <section id="services">
-        <h2>サービス</h2>
+    <nav>
         <ul>
-            <li>ウェブ開発</li>
-            <li>アプリケーション開発</li>
-            <li>デザインサービス</li>
+            <li><a href="#about">会社概要</a></li>
+            <li><a href="#history">沿革</a></li>
+            <li><a href="#business">事業内容</a></li>
+            <li><a href="#contact">連絡先</a></li>
         </ul>
-    </section>
-
-    <section id="contact">
-        <h2>お問い合わせ</h2>
-        <p>お気軽にお問い合わせください。</p>
-        <a href="contact.html">お問い合わせフォーム</a>
-    </section>
-
+    </nav>
+    <div class="container">
+        <div class="section" id="about">
+            <h2>会社概要</h2>
+            <p>南満州鉄道株式会社（満鉄）は、1906年に設立され、現在もアジアを中心とした鉄道・物流・インフラ事業を展開する国際企業です。歴史ある鉄道事業を基盤に、現代の技術を活用したスマートシティ開発、再生可能エネルギー事業、国際物流ネットワークの構築を推進。持続可能な未来を目指し、地域社会とグローバル経済の発展に貢献しています。</p>
+        </div>
+        <div class="section" id="history">
+            <h2>沿革</h2>
+            <ul>
+                <li><strong>1906年</strong>: ポーツマス条約に基づき設立。初代社長に後藤新平が就任。</li>
+                <li><strong>1933年</strong>: 満州国設立後、鉄道網を拡張し、産業開発を加速。</li>
+                <li><strong>1990年代</strong>: グローバル化に伴い、東アジア物流ネットワークを確立。</li>
+                <li><strong>2025年</strong>: AI技術とクリーンエネルギーを活用した次世代鉄道システムを導入。</li>
+            </ul>
+        </div>
+        <div class="section" id="business">
+            <h2>事業内容</h2>
+            <p>満鉄は以下の分野で事業を展開しています：</p>
+            <ul>
+                <li><strong>鉄道事業</strong>: 高速鉄道および貨物輸送網を東アジア全域で運営。</li>
+                <li><strong>スマートシティ開発</strong>: IoTとAIを活用した都市インフラの設計・運営。</li>
+                <li><strong>エネルギー事業</strong>: 太陽光・風力発電によるクリーンエネルギー供給。</li>
+                <li><strong>国際物流</strong>: 海陸空を統合したグローバルサプライチェーン管理。</li>
+            </ul>
+        </div>
+        <div class="section" id="contact">
+            <h2>連絡先</h2>
+            <p>南満州鉄道株式会社 本社</p>
+            <p>〒100-0004 東京都千代田区大手町1-1-1</p>
+            <p>電話: 03-1234-5678</p>
+            <p>メール: info@mantetsu.co.jp</p>
+            <p>ウェブサイト: <a href="#">www.mantetsu.co.jp</a></p>
+        </div>
+    </div>
     <footer>
-        <p>&copy; 2023 TEEN IT Company</p>
+        <p>&copy; 2025 南満州鉄道株式会社. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
-
